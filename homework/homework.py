@@ -306,7 +306,7 @@ def make_pipeline(train):
 def optimize_hyperparameters(pipeline, x_train, y_train):
     param_grid = {
     # Mantiene la selección de características de tu Pipeline
-    "SelectKBest__k": [5, 10, "all"], 
+    "SelectKBest__k": range(1, 15), 
     
     # Hiperparámetros específicos para Regresión Logística
     "logistic__C": [0.01, 0.1, 1.0, 10.0],                  # Inverso de la fuerza de regularización
